@@ -1,0 +1,61 @@
+import React, { useContext } from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
+import { ThemeContext } from "../context/ThemeContext";
+
+const Home = () => {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <div
+      name="home"
+      className={`w-full h-screen  ${
+        theme === "dark" ? "bg-[#0a192f]" : "bg-white"
+      }`}
+    >
+      {/* Container */}
+      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+        <p className="text-pink-600">Hi, my name is</p>
+        <h1
+          className={`text-4xl sm:text-7xl font-bold ${
+            theme === "dark" ? "text-[#ccd6f6]" : "text-gray-800"
+          }`}
+        >
+          Sameer John
+        </h1>
+        <h2
+          className={`text-4xl sm:text-7xl font-bold ${
+            theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
+          }`}
+        >
+          I'm a React.js Frontend Developer.
+        </h2>
+        <p
+          className={`${
+            theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
+          } py-4 max-w-[700px]`}
+        >
+          I’m a frontend developer specializing in building responsive,
+          high-performance web applications using React.js. I focus on creating
+          clean, modern user interfaces and seamless user experiences.
+        </p>
+        <div>
+          <button
+            className={`group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 ${
+              theme === "dark" ? "text-white" : "text-gray-800 border-gray-800"
+            }`}
+          >
+            <Link to="work" smooth={true} duration={500}>
+              View Work
+            </Link>
+            <span className="group-hover:rotate-90 duration-300">
+              <HiArrowNarrowRight className="ml-3 " />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

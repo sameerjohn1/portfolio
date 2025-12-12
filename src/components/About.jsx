@@ -35,10 +35,11 @@ const About = () => {
           </div>
           <div>
             <p>
-              Highly motivated React.js Developer seeking to contribute skills
-              in front-end development and problem-solving to a dynamic team.
-              Eager to apply academic knowledge and practical experience in
-              building interactive and responsive web applications.
+              Highly motivated React.js Developer with 2 years of expertise,
+              seeking to contribute skills in front-end development and
+              problem-solving to a dynamic team. Eager to apply academic
+              knowledge and practical experience in building interactive and
+              responsive web applications.
             </p>
           </div>
         </div>

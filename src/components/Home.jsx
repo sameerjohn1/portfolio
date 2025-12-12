@@ -40,18 +40,20 @@ const Home = () => {
           clean, modern user interfaces and seamless user experiences.
         </p>
         <div>
-          <button
-            className={`group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 ${
-              theme === "dark" ? "text-white" : "text-gray-800 border-gray-800"
-            }`}
-          >
-            <Link to="work" smooth={true} duration={500}>
+          <Link to="work" smooth={true} duration={500}>
+            <button
+              className={`group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 ${
+                theme === "dark"
+                  ? "text-white"
+                  : "text-gray-800 border-gray-800"
+              }`}
+            >
               View Work
-            </Link>
-            <span className="group-hover:rotate-90 duration-300">
-              <HiArrowNarrowRight className="ml-3 " />
-            </span>
-          </button>
+              <span className="group-hover:rotate-90 duration-300">
+                <HiArrowNarrowRight className="ml-3 " />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -5,10 +5,11 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div>
+    <div className="relative">
       <Navbar />
       <Home />
       <About />
@@ -16,6 +17,7 @@ function App() {
       <Work />
       <Projects />
       <Contact />
+      <ScrollToTop />
     </div>
   );
 }

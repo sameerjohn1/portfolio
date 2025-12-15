@@ -1,10 +1,41 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
+import ParticlesComponent from "./Particle";
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
+  const [nav, setNav] = useState(false);
+  const [showParticles, setShowParticles] = useState(true);
+  const headerRef = useRef(null);
+
+  // Observe when the header scrolls out of view
+  useEffect(() => {
+    const headerElement = headerRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // Check if header is in view
+        if (entry.isIntersecting) {
+          setShowParticles(true); // Show particles when header is in view
+        } else {
+          setShowParticles(false); // Hide particles when header is out of view
+        }
+      },
+      { threshold: 0.1 } // Adjust the threshold as needed
+    );
+
+    if (headerElement) {
+      observer.observe(headerElement);
+    }
+
+    return () => {
+      if (headerElement) {
+        observer.unobserve(headerElement);
+      }
+    };
+  }, []);
 
   return (
     <div
@@ -13,6 +44,11 @@ const Home = () => {
         theme === "dark" ? "bg-[#0a192f]" : "bg-white"
       }`}
     >
+      <ParticlesComponent
+        id="particles"
+        className="absolute top-0 left-0 w-full h-full z-[-1]"
+      />
+
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600">Hi, my name is</p>

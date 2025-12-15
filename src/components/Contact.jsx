@@ -1,6 +1,7 @@
 import React, { useState, useContext, useRef } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
@@ -14,13 +15,12 @@ const Contact = () => {
     e.preventDefault();
 
     if (!name || !email || !message) {
-      alert("Please fill in all fields.");
+      toast.error("Please fill in all fields."); // Error toast
       return;
     }
 
     setLoading(true);
 
-    // Replace these with your actual EmailJS keys
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -28,7 +28,7 @@ const Contact = () => {
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
         console.log("EmailJS Result:", result.text);
-        alert("Aapka message kamyabi se bhej diya gaya hai!");
+        toast.success("Message sent successfully!"); // Success toast
         setName("");
         setEmail("");
         setMessage("");
@@ -36,9 +36,7 @@ const Contact = () => {
       },
       (error) => {
         console.log("EmailJS Error:", error);
-        alert(
-          "Message bhejne mein nakaami hui, baraye meharbani dobara koshish karein."
-        );
+        toast.error("Something went wrong. Please try again later.");
         setLoading(false);
       }
     );
@@ -75,7 +73,7 @@ const Contact = () => {
         </div>
 
         <input
-          className="bg-[#ccd6f6] p-2"
+          className="bg-[#ccd6f6] p-2 z-[9999]"
           type="text"
           placeholder="Name"
           name="name"
@@ -83,7 +81,7 @@ const Contact = () => {
           onChange={(e) => setName(e.target.value)}
         />
         <input
-          className="my-4 p-2 bg-[#ccd6f6]"
+          className="my-4 p-2 bg-[#ccd6f6] z-[9999]"
           type="email"
           placeholder="Email"
           name="email"
@@ -91,7 +89,7 @@ const Contact = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
-          className="bg-[#ccd6f6] p-2"
+          className="bg-[#ccd6f6] p-2 z-[9999]"
           name="message"
           rows="10"
           placeholder="Message"
@@ -101,7 +99,7 @@ const Contact = () => {
         <button
           type="submit"
           disabled={loading}
-          className={`border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center
+          className={`border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center z-[9999]
             ${
               theme === "dark"
                 ? "bg-[#0a192f] text-white"
@@ -111,6 +109,20 @@ const Contact = () => {
           {loading ? "Sending..." : "Let's Collaborate"}
         </button>
       </form>
+
+      {/* Toast container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme={theme === "dark" ? "dark" : "light"}
+      />
     </div>
   );
 };

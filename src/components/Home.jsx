@@ -46,11 +46,12 @@ const Home = () => {
     >
       <ParticlesComponent
         id="particles"
-        className="absolute top-0 left-0 w-full h-full z-[-1]"
+        className="absolute top-0 left-0 w-full h-full z-[-1] pointer-events-none"
       />
 
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+      {/* Container */}
+      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600">Hi, my name is</p>
         <h1
           className={`text-4xl sm:text-7xl font-bold ${

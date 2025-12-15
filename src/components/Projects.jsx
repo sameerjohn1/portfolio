@@ -56,7 +56,7 @@ const Projects = () => {
               href={project.link}
               key={index}
               className="
-               z-[9999] group relative rounded-xl overflow-hidden 
+               group relative rounded-xl overflow-hidden 
                 bg-white/10  shadow-lg  transition-all duration-500 
                 transform hover:-translate-y-2 hover:scale-[1.03] 
                 cursor-pointer border border-white/10

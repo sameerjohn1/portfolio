@@ -8,7 +8,6 @@ import {
   FaMoon,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-
 import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -26,7 +25,7 @@ const Navbar = () => {
       }`}
     >
       <div>
-        <h3 style={{ width: "50px" }}>Sameer</h3>
+        <h3 style={{ width: "50px", cursor: "pointer" }}>Sameer</h3>
       </div>
 
       {/* menu */}

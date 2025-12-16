@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className={`w-full h-screen flex justify-center items-center p-4 ${
+      className={`w-full py-20 flex justify-center items-center p-4 ${
         theme === "dark" ? "bg-[#0a192f]" : "bg-white"
       }`}
     >
@@ -67,8 +67,9 @@ const Contact = () => {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             } py-4`}
           >
-            Submit the form below or shoot me an email -
-            sameerprogrammer5@gmail.com
+            Submit the form below or reach out via email:{" "}
+            sameerprogrammer5@gmail.com or call me at :{" "}
+            <span className="font-sans font-medium">+92 329 6333301</span>
           </p>
         </div>
 

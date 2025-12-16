@@ -9,6 +9,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { react } from "../assets/icons";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -19,7 +20,7 @@ const Work = () => {
     {
       title: "React.js Developer",
       company_name: "Deutics Global",
-      icon: starbucks,
+      icon: react,
       iconBg: "#accbe1",
       date: "May 2024 - Oct 2024",
       points: [
@@ -38,7 +39,7 @@ const Work = () => {
     {
       title: "React.js Developer",
       company_name: "Znz Technologies",
-      icon: tesla,
+      icon: react,
       iconBg: "#fbc3bc",
       date: "Jan 2024 - March 2024",
       points: [
@@ -53,7 +54,7 @@ const Work = () => {
     {
       title: "React.js Developer",
       company_name: "Vvork Cloud Technologies",
-      icon: shopify,
+      icon: react,
       iconBg: "#b7e4c7",
       date: "Nov 2021 - Sep 2022",
       points: [
@@ -70,7 +71,7 @@ const Work = () => {
   return (
     <div
       name="work"
-      className={`w-full sm:mt-0 mt-20  ${
+      className={`w-full py-20 ${
         theme === "dark"
           ? "bg-[#0a192f] text-gray-300"
           : "bg-white text-gray-800"

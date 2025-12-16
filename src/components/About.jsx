@@ -1,8 +1,117 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import AboutImg from "../assets/images/aboutme.png";
+
+import {
+  css,
+  express,
+  git,
+  github,
+  html,
+  javascript,
+  mongodb,
+  motion,
+  mui,
+  nextjs,
+  nodejs,
+  react,
+  redux,
+  tailwindcss,
+} from "../assets/icons";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
+
+  const steps = [
+    {
+      title: "Passionate Frontend Developer",
+      desc: "I specialize in creating responsive, user-friendly web applications using React.js, Next.js, and Tailwind CSS.",
+      icon: (
+        <svg
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      ),
+    },
+    {
+      title: "UI/UX Enthusiast",
+      desc: "I focus on turning Figma designs into interactive and visually appealing websites.",
+      icon: (
+        <svg
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+      ),
+    },
+    {
+      title: "Project Experience",
+      desc: "Worked on eCommerce platforms, portfolios, and dynamic web apps integrating RESTful APIs.",
+      icon: (
+        <svg
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="5" r="3"></circle>
+          <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+        </svg>
+      ),
+    },
+    {
+      title: "Continuous Learner",
+      desc: "Always exploring new technologies, best practices, and modern frontend frameworks.",
+      icon: (
+        <svg
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      ),
+    },
+    {
+      title: "Team Player",
+      desc: "Collaborates effectively in agile teams, communicates clearly, and values clean code.",
+      icon: (
+        <svg
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+          <path d="M22 4L12 14.01l-3-3"></path>
+        </svg>
+      ),
+    },
+  ];
 
   return (
     <div
@@ -13,35 +122,66 @@ const About = () => {
           : "bg-white text-gray-800"
       }`}
     >
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-pink-600">
-              About
-            </p>
-          </div>
-          <div></div>
+      {/* Container */}
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+        <div>
+          <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
+            About Me
+          </p>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold">
-            <h1 className="head-text">
-              Hello, I'm{" "}
-              <span className="blue-gradient_text font-semibold drop-shadow">
-                {" "}
-                Sameer
-              </span>{" "}
-              👋
-            </h1>
-          </div>
-          <div>
-            <p>
-              Highly motivated React.js Developer with 2 years of expertise,
-              seeking to contribute skills in front-end development and
-              problem-solving to a dynamic team. Eager to apply academic
-              knowledge and practical experience in building interactive and
-              responsive web applications.
-            </p>
-          </div>
+
+        <div className="max-w-[1100px] w-full  gap-8 ">
+          <section className="text-gray-600 body-font">
+            <div className="container  py-10 mx-auto flex flex-wrap">
+              <div className="flex flex-wrap w-full">
+                {/* Steps */}
+                <div className="lg:w-[60%] md:w-1/2 md:pr-10 md:py-6">
+                  {steps.map((step, index) => (
+                    <div
+                      key={index}
+                      className={`flex relative items-start md:items-center ${
+                        index !== steps.length - 1 ? "pb-12" : ""
+                      }`}
+                    >
+                      {index !== steps.length - 1 && (
+                        <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                          <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                        </div>
+                      )}
+
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                        {step.icon}
+                      </div>
+
+                      <div className="flex-grow pl-4">
+                        <h2
+                          className={`font-medium title-font text-sm mb-1 tracking-wider ${
+                            theme === "dark" ? "text-white" : "text-gray-900"
+                          }`}
+                        >
+                          {step.title}
+                        </h2>
+                        <p
+                          className={`${
+                            theme === "dark" ? "text-gray-300" : "text-gray-700"
+                          } leading-relaxed`}
+                        >
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Image */}
+                <img
+                  className="lg:w-[40%] md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+                  src={AboutImg}
+                  alt="step"
+                />
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

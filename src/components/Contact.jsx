@@ -67,9 +67,8 @@ const Contact = () => {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             } py-4`}
           >
-            Submit the form below or reach out via email:{" "}
-            sameerprogrammer5@gmail.com or call me at :{" "}
-            <span className="font-sans font-medium">+92 329 6333301</span>
+            Submit the form below or shoot me an email -
+            sameerprogrammer5@gmail.com
           </p>
         </div>
 

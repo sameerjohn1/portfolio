@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaSun,
   FaMoon,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -143,6 +144,17 @@ const Navbar = () => {
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
               <span className="flex justify-between items-center w-full text-gray-300">
                 Gmail <HiOutlineMail size={30} />
+              </span>
+            </li>
+          </a>
+          <a
+            href="https://wa.me/923296333301"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-500">
+              <span className="flex justify-between items-center w-full text-gray-300">
+                WhatsApp <FaWhatsapp size={30} />
               </span>
             </li>
           </a>

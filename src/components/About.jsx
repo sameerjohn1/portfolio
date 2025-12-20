@@ -1,23 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import AboutImg from "../assets/images/aboutme.png";
-
-import {
-  css,
-  express,
-  git,
-  github,
-  html,
-  javascript,
-  mongodb,
-  motion,
-  mui,
-  nextjs,
-  nodejs,
-  react,
-  redux,
-  tailwindcss,
-} from "../assets/icons";
+import AboutImg from "../assets/images/image.jpg";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -130,7 +113,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="max-w-[1100px] w-full  gap-8 ">
+        <div className="max-w-[1100px] w-full  gap-8 z-[5]">
           <section className="text-gray-600 body-font">
             <div className="container  py-10 mx-auto flex flex-wrap">
               <div className="flex flex-wrap w-full">

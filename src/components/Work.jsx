@@ -18,37 +18,58 @@ const Work = () => {
 
   const experiences = [
     {
-      title: "React.js Developer",
+      title: "Associate Frontend Developer",
       company_name: "Deutics Global",
       icon: react,
       iconBg: "#accbe1",
       date: "May 2024 - Oct 2024",
       points: [
         "Led frontend development initiatives using React.js, focusing on creating responsive and intuitive web applications.",
-        "Utilized Redux Toolkit for state management, ensuring efficient data flow and application scalability on the frontend.",
-        "Collaborated closely with designers using Figma to translate UI/UX designs into pixel-perfect, functional components.",
-        "Designed and implemented RESTful APIs with Node.js and Express.js on the backend, integrating various third-party APIs for data fetching and processing.",
-        "Integrated secure authentication using JSON Web Tokens (JWT) and bcrypt.js.",
-        "Worked extensively with MongoDB for data storage, implementing efficient data models and query optimizations.",
-        "Implemented middleware and utilized tools like Nodemon for seamless backend development workflows.",
+        <span>
+          Developed and maintained the Camzify AI-powered surveillance platform
+          (
+          <a
+            href="https://camzify.com"
+            target="_blank"
+            className="font-bold text-pink-600 underline"
+          >
+            https://camzify.com
+          </a>
+          ), providing intelligent video monitoring, AI heat maps, and
+          role-based access control.
+        </span>,
+        "Built a scalable dashboard UI with a focus on performance, usability, and clean architecture, including Admin, Sub-Admin, and User interfaces with complete workflow handling.",
+        "Implemented core features such as video backup management, license plans, AI heat map visualizations, and notifications.",
+        "Designed advanced filters, pagination, and optimized data handling for large datasets, improving application performance with lazy loading, memoization, and efficient component structuring.",
+        "Added smooth animations and micro-interactions to enhance user experience.",
+        "Collaborated with product and backend teams using modern React best practices.",
+        "Utilized Redux Toolkit for state management, ensuring efficient data flow and application scalability.",
+        "Worked closely with designers using Figma to translate UI/UX designs into pixel-perfect, functional components.",
+        "Integrated secure authentication using JSON Web Tokens (JWT) and bcrypt.js, and worked extensively with MongoDB for data storage, implementing efficient data models and query optimizations.",
         "Participated actively in code reviews, providing constructive feedback to enhance code quality and maintain best practices.",
         "Developed reusable UI components and optimized applications for cross-browser compatibility and responsive design.",
         "Continuously updated skills and knowledge in frontend and backend technologies to deliver cutting-edge solutions.",
       ],
     },
     {
-      title: "React.js Developer",
+      title: "Junior React.js Developer",
       company_name: "Znz Technologies",
       icon: react,
       iconBg: "#fbc3bc",
       date: "Jan 2024 - March 2024",
       points: [
-        "Served as a Junior React.js Developer, working on reusable components and efficient state management.",
-        "Developed and maintained web applications using React.js and other related technologies.",
-        "Integrated APIs to fetch and display data dynamically within the application.",
-        "Implemented responsive design to ensure a seamless user experience across various devices.",
-        "Collaborated with designers using tools like Figma to convert UI/UX designs into functional components.",
-        "Participated in code reviews and provided constructive feedback to improve code quality.",
+        <span>
+          Contributed to the development of an <strong>E-learning</strong>{" "}
+          platform with interactive and community-driven features using
+          React.js.
+        </span>,
+        "Built reusable and modular components and efficiently managed application state to ensure scalability and maintainability.",
+        "Developed core user features allowing users to create and manage gigs, as well as like and comment on content to encourage engagement.",
+        "Implemented real-time chat functionality to enable seamless communication between users within the platform.",
+        "Integrated REST APIs to dynamically fetch, display, and update data, improving overall interactivity and responsiveness.",
+        "Ensured fully responsive UI across mobile, tablet, and desktop devices.",
+        "Collaborated closely with designers to convert Figma UI/UX designs into clean, production-ready interfaces.",
+        "Participated in code reviews, debugging, and refactoring, helping maintain code quality and follow best practices.",
       ],
     },
     {

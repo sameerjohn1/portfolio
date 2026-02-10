@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import coral from "../assets/images/coral.png";
-import shoes from "../assets/images/nike.png";
+import chatbot from "../assets/images/chatbot.png";
 import port from "../assets/images/portimg.png";
 
 const Projects = () => {
@@ -9,10 +9,10 @@ const Projects = () => {
 
   const projectData = [
     {
-      title: "Shoes E-Commerce Website",
-      desc: "Developed a React.js-based eCommerce platform for shoes, enabling users to browse a variety of products, add sorting , add filters , searching etc...",
-      img: shoes,
-      link: "https://shoesapplication-2f0e0.web.app/",
+      title: "AI Customer Support Chatbot",
+      desc: "Developed a production-ready, embeddable AI chatbot for websites, similar to Intercom and Tidio, using a single script tag. Built full-stack SaaS architecture supporting multiple organizations and websites. Implemented AI-powered responses using Google Gemini API. Ensured type-safe, maintainable code with TypeScript. Designed modern, responsive UI with Next.js App Router and Tailwind CSS. Integrated Scalekit for authentication, multi-organization support, and user management. Managed chat history and configuration using MongoDB. Deployed production-ready chatbot and dashboard on Vercel.",
+      img: chatbot, // <-- yahan apna imported image lagao
+      link: "https://ai-customer-support-b4dw.vercel.app/",
     },
     {
       title: "Portfolio Website",

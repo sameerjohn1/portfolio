@@ -1,10 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
-import starbucks from "../assets/images/starbucks.png";
-import tesla from "../assets/images/tesla.png";
-import shopify from "../assets/images/shopify.png";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -31,6 +27,7 @@ const Work = () => {
           <a
             href="https://camzify.com"
             target="_blank"
+            rel="noreferrer"
             className="font-bold text-pink-600 underline"
           >
             https://camzify.com

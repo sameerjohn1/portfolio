@@ -23,7 +23,7 @@ const Home = () => {
           setShowParticles(false); // Hide particles when header is out of view
         }
       },
-      { threshold: 0.1 } // Adjust the threshold as needed
+      { threshold: 0.1 }, // Adjust the threshold as needed
     );
 
     if (headerElement) {
@@ -44,10 +44,12 @@ const Home = () => {
         theme === "dark" ? "bg-[#0a192f]" : "bg-white"
       }`}
     >
-      <ParticlesComponent
-        id="particles"
-        className="absolute top-0 left-0 w-full h-full z-[-1] pointer-events-none"
-      />
+      {showParticles && (
+        <ParticlesComponent
+          id="particles"
+          className="absolute top-0 left-0 w-full h-full z-[-1] pointer-events-none"
+        />
+      )}
 
       {/* Container */}
       {/* Container */}
@@ -65,7 +67,7 @@ const Home = () => {
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
-          I'm a React.js Frontend Developer.
+          Frontend Developer | React.js Developer{" "}
         </h2>
         <p
           className={`${

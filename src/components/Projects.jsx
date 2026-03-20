@@ -3,6 +3,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import coral from "../assets/images/coral.png";
 import chatbot from "../assets/images/chatbot.png";
 import port from "../assets/images/portimg.png";
+import expenseTracker from "../assets/images/expenseTracker.png";
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
@@ -14,17 +15,18 @@ const Projects = () => {
       img: chatbot,
       link: "https://ai-customer-support-b4dw.vercel.app/",
     },
+
+    {
+      title: "Expense Tracker (MERN Stack)",
+      desc: "Developed a full-stack expense tracking application using React.js, Node.js, Express.js, and MongoDB. Implemented JWT authentication, interactive financial dashboards with Recharts, and full CRUD functionality for managing income and expense transactions. Built a responsive UI with Tailwind CSS.",
+      img: expenseTracker,
+      link: "https://lnkd.in/d8aTMiKS",
+    },
     {
       title: "Portfolio Website",
       desc: "Developed a 3D MacOS-style interactive UI using React and Three.js, featuring smooth window animations and realistic depth effects. Integrated responsive layouts, draggable elements, and real-time 3D rendering for an immersive desktop-like experience.",
       img: port,
       link: "https://mac-os-portfolio-react.vercel.app/",
-    },
-    {
-      title: "Coral Ecommerce",
-      desc: "Created a React.js-based eCommerce website, allowing users to browse products, see items , sort items . Fully responsive on all devices.",
-      img: coral,
-      link: "https://coral-894f6.web.app/",
     },
   ];
 

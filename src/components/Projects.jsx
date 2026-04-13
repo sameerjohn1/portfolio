@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Expense Tracker (MERN Stack)",
       desc: "Developed a full-stack expense tracking application using React.js, Node.js, Express.js, and MongoDB. Implemented JWT authentication, interactive financial dashboards with Recharts, and full CRUD functionality for managing income and expense transactions. Built a responsive UI with Tailwind CSS.",
       img: expenseTracker,
-      link: "https://lnkd.in/d8aTMiKS",
+      link: "https://sameerjohn1-expense-tracker-mern.vercel.app/",
     },
     {
       title: "Portfolio Website",

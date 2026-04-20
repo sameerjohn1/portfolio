@@ -67,16 +67,18 @@ const Home = () => {
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
-          Frontend Developer | React.js Developer{" "}
+          Frontend Engineer | React.js & Next.js{" "}
         </h2>
         <p
           className={`${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           } py-4 max-w-[700px]`}
         >
-          I’m a frontend developer specializing in building responsive,
-          high-performance web applications using React.js. I focus on creating
-          clean, modern user interfaces and seamless user experiences.
+          Frontend Engineer with 2+ years of experience building responsive,
+          scalable, and high-performance web applications using React.js,
+          Next.js, and TypeScript. Specialized in reusable UI components,
+          RESTful API integration, and delivering clean, user-focused digital
+          experiences.
         </p>
         <div>
           <Link to="work" smooth={true} duration={500}>

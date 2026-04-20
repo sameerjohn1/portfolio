@@ -7,10 +7,13 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import ScrollToTop from "./components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
+import Cursor from "./components/Cursor";
 
 function App() {
   return (
     <div className="relative">
+      <Cursor />
+
       <Navbar />
       <Home />
       <About />
@@ -30,7 +33,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light" // ya "dark", app theme ke hisaab se
+        theme="light"
       />
     </div>
   );

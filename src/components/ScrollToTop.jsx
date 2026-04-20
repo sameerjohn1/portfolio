@@ -8,7 +8,6 @@ const ScrollToTop = () => {
     const handleScroll = () => {
       const scrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
-      // show button after 50px scroll
       setVisible(scrollPosition > 50);
     };
 

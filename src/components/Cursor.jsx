@@ -30,13 +30,8 @@ const Cursor = () => {
 
   const isDark = theme === "dark";
 
-  const cursorColor = isDark
-    ? "rgba(209, 213, 219, 0.9)"
-    : "rgba(75, 85, 99, 0.9)";
-
-  const glowColor = isDark
-    ? "rgba(209, 213, 219, 0.6)"
-    : "rgba(75, 85, 99, 0.5)";
+  const cursorColor = "rgba(219, 39, 119, 0.9)";
+  const glowColor = "rgba(219, 39, 119, 0.5)";
 
   return (
     <div
@@ -54,6 +49,7 @@ const Cursor = () => {
           ? "translate(-50%, -50%) scale(1.8)"
           : "translate(-50%, -50%) scale(1)",
         transition: "transform 0.15s ease-out, box-shadow 0.25s ease",
+
         background: `radial-gradient(circle, ${cursorColor} 0%, transparent 70%)`,
 
         boxShadow: clicked

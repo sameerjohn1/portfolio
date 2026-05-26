@@ -7,8 +7,8 @@ const About = () => {
 
   const steps = [
     {
-      title: "Passionate Frontend Developer",
-      desc: "I specialize in creating responsive, user-friendly web applications using React.js, Next.js, and Tailwind CSS.",
+      title: "Full-Stack MERN Specialist",
+      desc: "Expert in building scalable web applications using React.js, Next.js, Node.js, and MongoDB. Proficient in creating responsive UIs with Tailwind CSS and implementing robust backend solutions.",
       icon: (
         <svg
           fill="none"
@@ -24,8 +24,8 @@ const About = () => {
       ),
     },
     {
-      title: "UI/UX Enthusiast",
-      desc: "I focus on turning Figma designs into interactive and visually appealing websites.",
+      title: "Frontend Architecture & Performance",
+      desc: "Specialized in optimizing React applications using TanStack Query, Redux Toolkit, and TypeScript. Focus on code splitting, lazy loading, and delivering high-performance digital experiences.",
       icon: (
         <svg
           fill="none"
@@ -41,8 +41,8 @@ const About = () => {
       ),
     },
     {
-      title: "Project Experience",
-      desc: "Worked on eCommerce platforms, portfolios, and dynamic web apps integrating RESTful APIs.",
+      title: "Design to Development Pipeline",
+      desc: "Convert Figma designs into pixel-perfect, interactive components. Implement RESTful APIs, authentication systems, and database integration for complete end-to-end solutions.",
       icon: (
         <svg
           fill="none"
@@ -59,8 +59,8 @@ const About = () => {
       ),
     },
     {
-      title: "Continuous Learner",
-      desc: "Always exploring new technologies, best practices, and modern frontend frameworks.",
+      title: "Real-World Project Experience",
+      desc: "Developed eCommerce platforms, SaaS applications, and dynamic dashboards. Strong expertise in state management, API integration, and deploying scalable applications on production servers.",
       icon: (
         <svg
           fill="none"
@@ -77,8 +77,8 @@ const About = () => {
       ),
     },
     {
-      title: "Team Player",
-      desc: "Collaborates effectively in agile teams, communicates clearly, and values clean code.",
+      title: "Continuous Tech Growth",
+      desc: "Always learning modern frameworks, backend technologies, and industry best practices. MERN Certified with hands-on experience in building production-ready applications.",
       icon: (
         <svg
           fill="none"

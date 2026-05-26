@@ -63,22 +63,22 @@ const Home = () => {
           Sameer John
         </h1>
         <h2
-          className={`text-4xl sm:text-7xl font-bold ${
+          className={`text-5xl mt-2 sm:text-4xl font-bold ${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
-          Frontend Engineer | React.js & Next.js{" "}
+          React.js • Next.js • Node.js • Express.js • MERN Certified{" "}
         </h2>
         <p
           className={`${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           } py-4 max-w-[700px]`}
         >
-          Frontend Engineer with 2+ years of experience building responsive,
-          scalable, and high-performance web applications using React.js,
-          Next.js, and TypeScript. Specialized in reusable UI components,
-          RESTful API integration, and delivering clean, user-focused digital
-          experiences.
+          Full-Stack Developer with hands-on experience building robust web
+          applications using the MERN stack. Proficient in React.js, Next.js,
+          TypeScript, and modern frontend architectures. Dedicated to creating
+          scalable solutions, optimizing performance, and delivering seamless
+          user experiences through clean, maintainable code.
         </p>
         <div>
           <Link to="work" smooth={true} duration={500}>

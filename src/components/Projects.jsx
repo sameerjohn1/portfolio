@@ -1,34 +1,10 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import coral from "../assets/images/coral.png";
-import chatbot from "../assets/images/chatbot.png";
-import port from "../assets/images/portimg.png";
-import expenseTracker from "../assets/images/expenseTracker.png";
+import { projectData } from "../data/projects";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
-
-  const projectData = [
-    {
-      title: "AI Customer Support Chatbot",
-      desc: "Developed a production-ready, embeddable AI chatbot for websites, similar to Intercom and Tidio, using a single script tag. Built full-stack SaaS architecture supporting multiple organizations and websites. Implemented AI-powered responses using Google Gemini API. Ensured type-safe, maintainable code with TypeScript. Designed modern, responsive UI with Next.js App Router and Tailwind CSS. Integrated Scalekit for authentication, multi-organization support, and user management. Managed chat history and configuration using MongoDB. Deployed production-ready chatbot and dashboard on Vercel.",
-      img: chatbot,
-      link: "https://ai-customer-support-b4dw.vercel.app/",
-    },
-
-    {
-      title: "Expense Tracker (MERN Stack)",
-      desc: "Developed a full-stack expense tracking application using React.js, Node.js, Express.js, and MongoDB. Implemented JWT authentication, interactive financial dashboards with Recharts, and full CRUD functionality for managing income and expense transactions. Built a responsive UI with Tailwind CSS.",
-      img: expenseTracker,
-      link: "https://sameerjohn1-expense-tracker-mern.vercel.app/",
-    },
-    {
-      title: "Portfolio Website",
-      desc: "Developed a 3D MacOS-style interactive UI using React and Three.js, featuring smooth window animations and realistic depth effects. Integrated responsive layouts, draggable elements, and real-time 3D rendering for an immersive desktop-like experience.",
-      img: port,
-      link: "https://mac-os-portfolio-react.vercel.app/",
-    },
-  ];
 
   return (
     <div
@@ -40,6 +16,7 @@ const Projects = () => {
       }`}
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full">
+        {/* HEADER */}
         <div className="pb-8">
           <p
             className={`text-4xl font-bold inline border-b-4 border-pink-600 ${
@@ -48,18 +25,19 @@ const Projects = () => {
           >
             Projects
           </p>
+
           <p className="py-6">Here are some of my personal projects</p>
         </div>
 
         {/* PROJECT GRID */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 ">
-          {projectData.map((project, index) => (
-            <a
-              href={project.link}
-              key={index}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {projectData.map((project) => (
+            <Link
+              key={project.id}
+              to={`/project/${project.id}`}
               className="
-               group relative rounded-xl overflow-hidden 
-                bg-white/10  shadow-lg  transition-all duration-500 
+                group relative rounded-xl overflow-hidden 
+                bg-white/10 shadow-lg transition-all duration-500 
                 transform hover:-translate-y-2 hover:scale-[1.03] 
                 cursor-pointer border border-white/10
               "
@@ -76,28 +54,20 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              {/* TEXT CONTENT */}
+              {/* TITLE ONLY */}
               <div className="p-4">
                 <h3
-                  className={`text-lg font-semibold mb-1 ${
+                  className={`text-lg font-semibold ${
                     theme === "dark" ? "text-gray-100" : "text-gray-900"
                   }`}
                 >
                   {project.title}
                 </h3>
-
-                <p
-                  className={`text-sm leading-relaxed ${
-                    theme === "dark" ? "text-gray-400" : "text-gray-600"
-                  }`}
-                >
-                  {project.desc}
-                </p>
               </div>
 
-              {/* HOVER BORDER GLOW */}
-              <div className="absolute inset-0 border-2 border-transparent  rounded-xl transition-all duration-300"></div>
-            </a>
+              {/* BORDER GLOW */}
+              <div className="absolute inset-0 border-2 border-transparent rounded-xl transition-all duration-300"></div>
+            </Link>
           ))}
         </div>
       </div>

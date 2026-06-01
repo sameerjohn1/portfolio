@@ -52,18 +52,17 @@ const Home = () => {
       )}
 
       {/* Container */}
-      {/* Container */}
-      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-pink-600">Hi, my name is</p>
+      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full sm:pt-0 pt-14">
+        <p className="text-pink-600 sm:mt-2 mt-20">Hi, my name is</p>
         <h1
-          className={`text-4xl sm:text-7xl font-bold ${
+          className={`sm:text-7xl text-3xl font-bold  ${
             theme === "dark" ? "text-[#ccd6f6]" : "text-gray-800"
           }`}
         >
           Sameer John
         </h1>
         <h2
-          className={`text-5xl mt-2 sm:text-4xl font-bold ${
+          className={` sm:text-4xl text-3xl font-bold  ${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
@@ -72,7 +71,7 @@ const Home = () => {
         <p
           className={`${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
-          } py-4 max-w-[700px]`}
+          } py-4 max-w-[700px] sm:text-lg text-base  `}
         >
           Full-Stack Developer with hands-on experience building robust web
           applications using the MERN stack. Proficient in React.js, Next.js,

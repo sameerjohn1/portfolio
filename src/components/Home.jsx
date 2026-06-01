@@ -53,7 +53,7 @@ const Home = () => {
 
       {/* Container */}
       <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full sm:pt-0 pt-14">
-        <p className="text-pink-600 sm:mt-2 mt-20">Hi, my name is</p>
+        <p className="text-pink-600 sm:mt-2 ">Hi, my name is</p>
         <h1
           className={`sm:text-7xl text-3xl font-bold  ${
             theme === "dark" ? "text-[#ccd6f6]" : "text-gray-800"

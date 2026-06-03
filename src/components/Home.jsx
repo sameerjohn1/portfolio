@@ -52,32 +52,34 @@ const Home = () => {
       )}
 
       {/* Container */}
-      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full sm:pt-0 pt-14">
-        <p className="text-pink-600 sm:mt-2 ">Hi, my name is</p>
+      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+        <p className="text-pink-600">Hi, my name is</p>
         <h1
-          className={`sm:text-7xl text-3xl font-bold  ${
+          className={`text-4xl sm:text-7xl font-bold ${
             theme === "dark" ? "text-[#ccd6f6]" : "text-gray-800"
           }`}
         >
           Sameer John
         </h1>
         <h2
-          className={` sm:text-4xl text-3xl font-bold  ${
+          className={`text-5xl mt-2 sm:text-4xl font-bold ${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
-          React.js • Next.js • Node.js • Express.js • MERN Certified{" "}
+          React.js & Next.js Developer | TypeScript · Redux Toolkit · TanStack
+          Query | MERN Stack
         </h2>
         <p
           className={`${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
-          } py-4 max-w-[700px] sm:text-lg text-base  `}
+          } py-4 max-w-[700px]`}
         >
-          Full-Stack Developer with hands-on experience building robust web
-          applications using the MERN stack. Proficient in React.js, Next.js,
-          TypeScript, and modern frontend architectures. Dedicated to creating
-          scalable solutions, optimizing performance, and delivering seamless
-          user experiences through clean, maintainable code.
+          Frontend-focused Full-Stack Developer with hands-on experience
+          building scalable web applications. Specialized in React.js and
+          Next.js with TypeScript, Redux Toolkit, and TanStack Query on the
+          frontend — and Node.js with Express.js on the backend. I focus on
+          clean component architecture, performance optimization, and seamless
+          API integration to deliver user experiences that actually work well.
         </p>
         <div>
           <Link to="work" smooth={true} duration={500}>

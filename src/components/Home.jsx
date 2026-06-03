@@ -52,17 +52,18 @@ const Home = () => {
       )}
 
       {/* Container */}
-      <div className="relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-pink-600">Hi, my name is</p>
+      {/* Container */}
+      <div className="relative z-10 max-w-[1000px] mx-auto px-6 sm:px-8 flex flex-col justify-center h-full pt-20 sm:pt-0">
+        <p className="text-pink-600 text-sm sm:text-base">Hi, my name is</p>
         <h1
-          className={`text-4xl sm:text-7xl font-bold ${
+          className={`text-3xl sm:text-7xl font-bold ${
             theme === "dark" ? "text-[#ccd6f6]" : "text-gray-800"
           }`}
         >
           Sameer John
         </h1>
         <h2
-          className={`text-5xl mt-2 sm:text-4xl font-bold ${
+          className={`text-lg sm:text-3xl mt-2 font-bold leading-snug ${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
           }`}
         >
@@ -72,7 +73,7 @@ const Home = () => {
         <p
           className={`${
             theme === "dark" ? "text-[#8892b0]" : "text-gray-600"
-          } py-4 max-w-[700px]`}
+          } py-4 max-w-[700px] text-sm sm:text-base`}
         >
           Frontend-focused Full-Stack Developer with hands-on experience
           building scalable web applications. Specialized in React.js and

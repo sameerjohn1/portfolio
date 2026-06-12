@@ -6,6 +6,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { react } from "../assets/icons";
+import mern from "../assets/images/mern.png";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -13,6 +14,31 @@ const Work = () => {
   const { theme } = useContext(ThemeContext);
 
   const experiences = [
+    {
+      title: "Junior MERN Stack Developer (Contract)",
+      company_name: "Sprouto Group",
+      icon: mern,
+      iconBg: "#fff",
+      date: "May 2026",
+      points: [
+        "Designed and integrated a Resend API on the backend (Node.js/Express.js) and connected it end-to-end with the React.js frontend, enabling transactional email functionality within the application.",
+        "Strengthened backend security by enhancing protected route architecture in Node.js, improving access control and ensuring unauthorized users were properly restricted.",
+        "Improved frontend codebase quality through code splitting and component reusability — reducing bundle size and making the UI layer more maintainable and scalable.",
+        "Participated in code reviews, providing and receiving feedback to uphold code quality standards within the team.",
+      ],
+    },
+    {
+      title: "Frontend Developer (Freelance)",
+      company_name: "Self-Employed",
+      icon: react,
+      iconBg: "#ffd6a5",
+      date: "Nov 2025 - Apr 2026",
+      points: [
+        "Built and shipped an AI Customer Support Chatbot using Next.js App Router, TypeScript, Google Gemini API, and MongoDB — live on Vercel. Supports multi-tenant SaaS with multi-org authentication via Scalekit. Deployable via a single script tag (similar to Intercom/Tidio).",
+        "Developed a full-stack MERN Expense Tracker with JWT authentication, protected routes, complete CRUD operations, and an interactive analytics dashboard using Recharts — live on Vercel.",
+        "Deepened expertise in Next.js App Router, SSR/SSG patterns, TypeScript, JWT authentication flows, and third-party auth integrations (Scalekit).",
+      ],
+    },
     {
       title: "Associate Frontend Developer",
       company_name: "Deutics Global",

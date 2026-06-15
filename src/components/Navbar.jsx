@@ -140,7 +140,11 @@ const Navbar = () => {
               </span>
             </li>
           </a>
-          <a href="mailto:sameerprogrammer5@gmail.com">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sameerprogrammer5@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
               <span className="flex justify-between items-center w-full text-gray-300">
                 Gmail <HiOutlineMail size={30} />

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
@@ -19,6 +20,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const { theme } = useContext(ThemeContext);
   const [index, setIndex] = useState(0);
 
   const prev = () => {
@@ -36,29 +38,53 @@ export default function Testimonials() {
   const current = testimonials[index];
 
   return (
-    <div className="bg-[#2f363c] text-white py-16 px-4 md:px-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
+    <div
+      className={`py-16 px-4 md:px-16 z-[9999] ${
+        theme === "dark"
+          ? "bg-[#0a192f] text-gray-300"
+          : "bg-white text-gray-800"
+      }`}
+    >
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col md:flex-row gap-10 items-center">
         {/* LEFT SIDE */}
         <div className="w-full md:w-1/2">
-          <span className="bg-white/10 text-sm px-4 py-1 rounded-full inline-block mb-4">
+          <span
+            className={`text-sm px-4 py-1 rounded-full inline-block mb-4 z-[9999] ${
+              theme === "dark"
+                ? "bg-white/10 text-gray-300"
+                : "bg-gray-200 text-gray-600"
+            }`}
+          >
             Testimonials
           </span>
 
-          <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-4">
+          <h2
+            className={`text-2xl md:text-4xl font-semibold leading-tight mb-4 z-[9999] ${
+              theme === "dark" ? "text-white" : "text-gray-900"
+            }`}
+          >
             What our clients are saying about us?
           </h2>
 
-          <p className="text-gray-300 text-sm md:text-base">
+          <p
+            className={`text-sm md:text-base z-[9999] ${
+              theme === "dark" ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Discover real feedback from users about their experience with our
             platform.
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-3 mt-6 relative z-50">
+          <div className="flex gap-3 mt-6 relative  z-[9999]">
             <button
               type="button"
               onClick={prev}
-              className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center cursor-pointer hover:bg-gray-200 transition"
+              className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ${
+                theme === "dark"
+                  ? "bg-[#112240] text-white hover:bg-[#1a3356]"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
             >
               <ChevronLeft size={18} />
             </button>
@@ -66,7 +92,11 @@ export default function Testimonials() {
             <button
               type="button"
               onClick={next}
-              className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center cursor-pointer hover:bg-gray-200 transition"
+              className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ${
+                theme === "dark"
+                  ? "bg-[#112240] text-white hover:bg-[#1a3356]"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
             >
               <ChevronRight size={18} />
             </button>
@@ -74,8 +104,14 @@ export default function Testimonials() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="w-full max-w-sm bg-white text-black rounded-xl p-6 shadow-lg">
+        <div className="w-full md:w-1/2 flex justify-center z-[9999]">
+          <div
+            className={`w-full max-w-sm rounded-xl p-6 shadow-lg ${
+              theme === "dark"
+                ? "bg-[#112240] text-white"
+                : "bg-white text-black"
+            }`}
+          >
             {/* HEADER */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
@@ -87,7 +123,13 @@ export default function Testimonials() {
 
                 <div>
                   <h4 className="font-semibold text-sm">{current.name}</h4>
-                  <p className="text-xs text-gray-500">{current.location}</p>
+                  <p
+                    className={`text-xs ${
+                      theme === "dark" ? "text-gray-400" : "text-gray-500"
+                    }`}
+                  >
+                    {current.location}
+                  </p>
                 </div>
               </div>
 
@@ -100,7 +142,11 @@ export default function Testimonials() {
             </div>
 
             {/* TEXT */}
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p
+              className={`text-sm leading-relaxed ${
+                theme === "dark" ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
               {current.text}
             </p>
           </div>

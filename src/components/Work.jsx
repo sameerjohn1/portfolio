@@ -115,7 +115,7 @@ const Work = () => {
   return (
     <div
       name="work"
-      className={`w-full py-20 ${
+      className={`w-full py-20  ${
         theme === "dark"
           ? "bg-[#0a192f] text-gray-300"
           : "bg-white text-gray-800"

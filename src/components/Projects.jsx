@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className={`w-full py-20 ${
+      className={`w-full py-20 z-[9999] ${
         theme === "dark"
           ? "bg-[#0a192f] text-gray-300"
           : "bg-white text-gray-900"
@@ -26,7 +26,7 @@ const Projects = () => {
             Projects
           </p>
 
-          <p className="py-6">Here are some of my personal projects</p>
+          <p className="py-6 z-[9999]">Here are some of my personal projects</p>
         </div>
 
         {/* PROJECT GRID */}
@@ -55,9 +55,9 @@ const Projects = () => {
               </div>
 
               {/* TITLE ONLY */}
-              <div className="p-4">
+              <div className="p-4 z-[9999]">
                 <h3
-                  className={`text-lg font-semibold ${
+                  className={`text-lg font-semibold z-[9999] ${
                     theme === "dark" ? "text-gray-100" : "text-gray-900"
                   }`}
                 >

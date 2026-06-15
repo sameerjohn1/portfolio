@@ -108,7 +108,7 @@ const About = () => {
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
-          <p className="text-4xl font-bold inline border-b-4 border-pink-600 ">
+          <p className="text-4xl font-bold inline border-b-4 border-pink-600 z-[9999] ">
             About Me
           </p>
         </div>
@@ -118,7 +118,7 @@ const About = () => {
             <div className="container  py-10 mx-auto flex flex-wrap">
               <div className="flex flex-wrap w-full">
                 {/* Steps */}
-                <div className="lg:w-[60%] md:w-1/2 md:pr-10 md:py-6">
+                <div className="lg:w-[60%] md:w-1/2 md:pr-10 md:py-6 z-[9999]">
                   {steps.map((step, index) => (
                     <div
                       key={index}
@@ -132,13 +132,13 @@ const About = () => {
                         </div>
                       )}
 
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full z-[9999] bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
                         {step.icon}
                       </div>
 
                       <div className="flex-grow pl-4">
                         <h2
-                          className={`font-medium title-font text-sm mb-1 tracking-wider ${
+                          className={`font-medium title-font text-sm mb-1 tracking-wider z-[9999] ${
                             theme === "dark" ? "text-white" : "text-gray-900"
                           }`}
                         >

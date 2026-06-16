@@ -39,7 +39,8 @@ export default function Testimonials() {
 
   return (
     <div
-      className={`py-16 px-4 md:px-16 z-[9999] ${
+      name="testimonials"
+      className={`py-16 px-4 md:px-16 z-[50] ${
         theme === "dark"
           ? "bg-[#0a192f] text-gray-300"
           : "bg-white text-gray-800"
@@ -49,7 +50,7 @@ export default function Testimonials() {
         {/* LEFT SIDE */}
         <div className="w-full md:w-1/2">
           <span
-            className={`text-sm px-4 py-1 rounded-full inline-block mb-4 z-[9999] ${
+            className={`text-sm px-4 py-1 rounded-full inline-block mb-4 z-[50] ${
               theme === "dark"
                 ? "bg-white/10 text-gray-300"
                 : "bg-gray-200 text-gray-600"
@@ -59,7 +60,7 @@ export default function Testimonials() {
           </span>
 
           <h2
-            className={`text-2xl md:text-4xl font-semibold leading-tight mb-4 z-[9999] ${
+            className={`text-2xl md:text-4xl font-semibold leading-tight mb-4 z-[50] ${
               theme === "dark" ? "text-white" : "text-gray-900"
             }`}
           >
@@ -67,7 +68,7 @@ export default function Testimonials() {
           </h2>
 
           <p
-            className={`text-sm md:text-base z-[9999] ${
+            className={`text-sm md:text-base z-[5] ${
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
@@ -76,7 +77,7 @@ export default function Testimonials() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-3 mt-6 relative  z-[9999]">
+          <div className="flex gap-3 mt-6 relative  z-[50]">
             <button
               type="button"
               onClick={prev}
@@ -104,7 +105,7 @@ export default function Testimonials() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-full md:w-1/2 flex justify-center z-[9999]">
+        <div className="w-full md:w-1/2 flex justify-center z-[50]">
           <div
             className={`w-full max-w-sm rounded-xl p-6 shadow-lg ${
               theme === "dark"

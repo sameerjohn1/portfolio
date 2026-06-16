@@ -52,7 +52,6 @@ const Home = () => {
       )}
 
       {/* Container */}
-      {/* Container */}
       <div className="relative z-10 max-w-[1000px] mx-auto px-6 sm:px-8 flex flex-col justify-center h-full pt-20 sm:pt-0">
         <p className="text-pink-600 text-sm sm:text-base">Hi, my name is</p>
         <h1
